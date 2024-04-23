@@ -1,4 +1,4 @@
-# Moralis-BigQuery Export Script
+# Moralis-BigQuery Import Script
 This small nodeJS script will export ERC20 transfer data to BigQuery for any specified contract, chain and block range. This script has no check for adding duplicate blocks. So be careful which block ranges you start to sync and make sure that you don't insert the same block multiple times. 
 
 The script will sync in order of highest block to lowest block in order to prevent gaps in block data in case the script fails.
