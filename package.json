@@ -1,0 +1,18 @@
+{
+  "name": "moralis-bigquery-sync-script",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/bigquery": "^7.5.2",
+    "dotenv": "^16.4.5",
+    "moralis": "^2.25.2"
+  }
+}
