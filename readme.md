@@ -28,7 +28,7 @@ Inside config.js, there are some parameters that configure which contract and wh
 ### Database schema
 Your schema in BigQuery is assumed to look like the following. But you can of course modify it in main.js to fit your DB schema. Remember that there are multiple SQL and API calls you have to edit in case your schema is different. 
 
-```json
+```
         tx_hash: STRING,
         contract: STRING,
         from: STRING,
