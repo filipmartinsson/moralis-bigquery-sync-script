@@ -17,14 +17,14 @@ If you want to send live data into your data warehouse, you should set up a Mora
 ### Syncing config
 Inside config.js, there are some parameters that configure which contract and which block range to sync. 
 
-`contract`: The ERC20 contract address
-`chainId`: The chain to sync.
-`lowestBlock`: The block from where you want to start your sync. 
-`highestBlockOverride`: Leave as `null` and the script will automatically sync up until the oldest (lowest) block in your bigquery table. Only set this if you want to override where to stop the sync. 
-`batchSize`: The amount of blocks to fetch and insert at once. The higher batch size, the faster the syncing. But you are limited by the maximum upload size to BigQuery in one request. For USDT I've found batch size 100 to be a good value. If you have a contract with less transfer activity you can increase this substantially.   
-`bigQueryTableId`: Your bigquery table id
-`bigQueryDatasetId`: Your bigquery dataset id
-`googleKeyFilePath`: The path to your local google keyfile
+`contract`: The ERC20 contract address  
+`chainId`: The chain to sync.  
+`lowestBlock`: The block from where you want to start your sync.  
+`highestBlockOverride`: Leave as `null` and the script will automatically sync up until the oldest (lowest) block in your bigquery table. Only set this if you want to override where to stop the sync.  
+`batchSize`: The amount of blocks to fetch and insert at once. The higher batch size, the faster the syncing. But you are limited by the maximum upload size to BigQuery in one request. For USDT I've found batch size 100 to be a good value. If you have a contract with less transfer activity you can increase this substantially.  
+`bigQueryTableId`: Your bigquery table id  
+`bigQueryDatasetId`: Your bigquery dataset id  
+`googleKeyFilePath`: The path to your local google keyfile  
 ### Database schema
 Your schema in BigQuery is assumed to look like the following. But you can of course modify it in main.js to fit your DB schema. Remember that there are multiple SQL and API calls you have to edit in case your schema is different. 
 
